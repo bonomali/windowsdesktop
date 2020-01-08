@@ -18,7 +18,10 @@
     <GeneratePkg>false</GeneratePkg>
   </PropertyGroup>
 
-  <!-- shared concerns, these shouldn't generally change -->
+  <!-- 
+    shared concerns, these shouldn't generally change
+    for profile information refere to https://github.com/dotnet/cli/issues/10536#issuecomment-488871926
+    -->
   <ItemGroup Condition="'$(PackageTargetRuntime)' == ''">
     <FrameworkListFileClass Include="Accessibility.dll" Profile="WindowsForms;WPF" />
     <FrameworkListFileClass Include="Microsoft.Win32.Registry.AccessControl.dll" Profile="WindowsForms;WPF" />
